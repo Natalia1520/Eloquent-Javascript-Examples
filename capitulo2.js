@@ -27,4 +27,4 @@ for (let i = 0; i < 8; i++) {
   f += c(8, i);
 }
 
-console.log(f);ter
+console.log(f);
