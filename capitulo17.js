@@ -78,7 +78,7 @@ let ball = {
   color: "red",
 };
 
-function updateBall() {
+function updateBalll() {
   ball.x += ball.speedX;
   ball.y += ball.speedY;
 
