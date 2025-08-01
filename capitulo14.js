@@ -1,14 +1,4 @@
 /////////BUILD A TABLE
-const MOUNTAINS = [
-  { name: "Kilimanjaro", height: 5895, place: "Tanzania" },
-  { name: "Everest", height: 8848, place: "Nepal" },
-  { name: "Mount Fuji", height: 3776, place: "Japan" },
-  { name: "Mont Blanc", height: 4808, place: "Italy/France" },
-  { name: "Vaalserberg", height: 323, place: "Netherlands" },
-  { name: "Denali", height: 6168, place: "United States" },
-  { name: "Popocatepetl", height: 5465, place: "Mexico" },
-];
-
 function construirTabla(datos) {
   const tabla = document.createElement("table");
   tabla.style.borderCollapse = "collapse";
@@ -17,7 +7,6 @@ function construirTabla(datos) {
 
   const encabezados = Object.keys(datos[0]);
 
-  // Encabezado
   const encabezado = document.createElement("tr");
   for (const clave of encabezados) {
     const th = document.createElement("th");
@@ -29,7 +18,6 @@ function construirTabla(datos) {
   }
   tabla.appendChild(encabezado);
 
-  // Filas
   for (const fila of datos) {
     const tr = encabezados.reduce((filaHTML, clave) => {
       const td = document.createElement("td");
@@ -80,7 +68,6 @@ console.log(byTagName(document.body, "p"));
 console.log(byTagName(document, "section"));
 
 /////////THE CAT'S HAT
-// Crear el elemento visual
 let cat = document.querySelector("#cat");
 let hat = document.querySelector("#hat");
 

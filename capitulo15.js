@@ -1,9 +1,6 @@
 /////////BALLOON
-
 <p id="balloon">🎈</p>;
-
 const balloon = document.querySelector("#balloon");
-
 let scale = 1;
 const maxScale = 3;
 const minScale = 0.5;
@@ -33,17 +30,14 @@ document.addEventListener("mousemove", (event) => {
   const dot = document.createElement("div");
   dot.className = "trail-dot";
 
-  // Punto
   dot.style.left = `${event.pageX}px`;
   dot.style.top = `${event.pageY}px`;
 
   document.body.appendChild(dot);
 
-  // Se desvanece
   setTimeout(() => {
     dot.style.opacity = "0";
   }, 300);
-  // Se elimina
   setTimeout(() => {
     dot.remove();
   }, 800);
@@ -81,7 +75,7 @@ function setupTabs(container) {
   });
 
   container.insertBefore(tabBar, container.firstChild);
-  tabBar.firstChild.click(); // activar la primera pestaña
+  tabBar.firstChild.click();
 }
 
 setupTabs(document.querySelector("#tab-container"));

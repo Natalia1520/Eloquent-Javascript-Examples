@@ -1,6 +1,5 @@
 /////////GAME OVER
 let lives = 3;
-
 const livesDisplay = document.createElement("div");
 livesDisplay.style.position = "fixed";
 livesDisplay.style.top = "10px";
@@ -39,18 +38,6 @@ function runGameWithLives(levels) {
   }
 
   startLevel();
-}
-
-function showGameOver() {
-  const msg = document.createElement("div");
-  msg.style.position = "fixed";
-  msg.style.top = "50%";
-  msg.style.left = "50%";
-  msg.style.transform = "translate(-50%, -50%)";
-  msg.style.font = "bold 36px sans-serif";
-  msg.style.color = "red";
-  msg.textContent = "💀 GAME OVER 💀";
-  document.body.appendChild(msg);
 }
 
 /////////PAUSING THE GAME
